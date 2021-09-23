@@ -6,6 +6,7 @@ public class Nave : MonoBehaviour
 {
     [SerializeField] float velocidad = 2;
     [SerializeField] Transform prefabDisparo;
+    private float velocidadDisparo = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -23,8 +24,9 @@ public class Nave : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-            Instantiate(prefabDisparo, transform.position,
+            Transform disparo = Instantiate(prefabDisparo, transform.position,
                 Quaternion.identity);
+            disparo.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(velocidadDisparo, 0, 0);
         }
     }
 
