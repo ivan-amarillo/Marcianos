@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Nave : MonoBehaviour
 {
-    private float velocidad = 2;
+    [SerializeField] float velocidad = 2;
+    [SerializeField] Transform prefabDisparo;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,12 @@ public class Nave : MonoBehaviour
         transform.Translate(horizontal * velocidad * Time.deltaTime, 0, 0);
         float vertical = Input.GetAxis("Vertical");
         transform.Translate(0, vertical * velocidad * Time.deltaTime, 0);
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Instantiate(prefabDisparo, transform.position,
+                Quaternion.identity);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
