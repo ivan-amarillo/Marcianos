@@ -20,4 +20,9 @@ public class Nave : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         transform.Translate(0, vertical * velocidad * Time.deltaTime, 0);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Golepado");
+    }
 }
