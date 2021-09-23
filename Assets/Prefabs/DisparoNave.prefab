@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5981232897511389264}
   - component: {fileID: 6236547425298285881}
   - component: {fileID: 4523621935042216551}
+  - component: {fileID: 2246476303758501046}
   m_Layer: 0
   m_Name: DisparoNave
   m_TagString: Untagged
@@ -131,3 +132,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2246476303758501046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3433917541229891438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c13a244d1b345a45b4bd33a9222d583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
