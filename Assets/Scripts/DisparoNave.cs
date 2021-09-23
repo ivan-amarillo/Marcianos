@@ -13,6 +13,19 @@ public class DisparoNave : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.x > 6.47)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Enemigo")
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
         
     }
 }
