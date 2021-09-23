@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DisparoNave : MonoBehaviour
 {
+    [SerializeField] Transform prefabExplosion;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +25,12 @@ public class DisparoNave : MonoBehaviour
     {
         if (other.tag == "Enemigo")
         {
+            Transform explosion = Instantiate(prefabExplosion, other.transform.position,
+                Quaternion.identity);
             Destroy(other.gameObject);
+            Destroy(explosion.gameObject, 1.5f);
             Destroy(gameObject);
+            
         }
         
     }
